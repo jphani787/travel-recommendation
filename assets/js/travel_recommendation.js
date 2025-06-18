@@ -14,7 +14,7 @@ async function searchKeyword() {
         return;
     }
     if (keywords.includes(searchKeyword.toLowerCase())) {
-        const url = "travel_recommendation_api.json";
+        const url = "assets/data/travel_recommendation_api.json";
         try {
             const response = await fetch(url);
             if (!response.ok) {
@@ -55,7 +55,7 @@ function getSearchResult(filteredData) {
 
 function getItem(item) {
     return `<div class="search-result-item glass-effect">
-                <img src="${item.imageUrl}" alt="${item.name}">
+                <img src="assets/images/${item.imageUrl}" alt="${item.name}">
                 <h2>${item.name}</h2>
                 <p>${item.description}</p>
                 <button class="button book-now-button">Visit</button>
